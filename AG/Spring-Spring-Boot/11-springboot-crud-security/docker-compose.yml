@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8.0.32
+    container_name: ag-crud-security
+    restart: always
+    environment:
+      - MYSQL_DATABASE=db_jpa_crud
+      - MYSQL_USER=marcos
+      - MYSQL_ROOT_PASSWORD=sasa1234
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql:/var/lib/mysql

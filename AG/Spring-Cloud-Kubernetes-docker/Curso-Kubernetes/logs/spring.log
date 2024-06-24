@@ -1,0 +1,25 @@
+2024-04-23T20:15:55.814Z  INFO 1 --- [Msvc-Users] [main] o.e.s.m.usuarios.MsvcUsersApplication    : Starting MsvcUsersApplication v0.0.1-SNAPSHOT using Java 17-ea with PID 1 (/app/Msvc-Users-0.0.1-SNAPSHOT.jar started by root in /app)
+2024-04-23T20:15:55.828Z  INFO 1 --- [Msvc-Users] [main] o.e.s.m.usuarios.MsvcUsersApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-23T20:16:05.748Z  INFO 1 --- [Msvc-Users] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-23T20:16:06.174Z  INFO 1 --- [Msvc-Users] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 363 ms. Found 1 JPA repository interface.
+2024-04-23T20:16:08.213Z  INFO 1 --- [Msvc-Users] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=874fd6d9-e998-3dcd-bcc0-bfa832b5f159
+2024-04-23T20:16:10.796Z  INFO 1 --- [Msvc-Users] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8001 (http)
+2024-04-23T20:16:10.875Z  INFO 1 --- [Msvc-Users] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-23T20:16:10.878Z  INFO 1 --- [Msvc-Users] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-23T20:16:11.362Z  INFO 1 --- [Msvc-Users] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-23T20:16:11.367Z  INFO 1 --- [Msvc-Users] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14487 ms
+2024-04-23T20:16:13.034Z  INFO 1 --- [Msvc-Users] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-23T20:16:13.493Z  INFO 1 --- [Msvc-Users] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-23T20:16:13.724Z  INFO 1 --- [Msvc-Users] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-23T20:16:15.424Z  INFO 1 --- [Msvc-Users] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-23T20:16:15.601Z  INFO 1 --- [Msvc-Users] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-23T20:16:18.484Z  INFO 1 --- [Msvc-Users] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ce655b9
+2024-04-23T20:16:18.498Z  INFO 1 --- [Msvc-Users] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-23T20:16:19.056Z  WARN 1 --- [Msvc-Users] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-23T20:16:19.066Z  WARN 1 --- [Msvc-Users] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-04-23T20:16:25.547Z  INFO 1 --- [Msvc-Users] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-23T20:16:25.849Z  INFO 1 --- [Msvc-Users] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-23T20:16:28.741Z  INFO 1 --- [Msvc-Users] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-23T20:16:31.691Z  WARN 1 --- [Msvc-Users] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-23T20:16:34.872Z  INFO 1 --- [Msvc-Users] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8001 (http) with context path ''
+2024-04-23T20:16:35.011Z  INFO 1 --- [Msvc-Users] [main] o.e.s.m.usuarios.MsvcUsersApplication    : Started MsvcUsersApplication in 44.695 seconds (process running for 51.162)

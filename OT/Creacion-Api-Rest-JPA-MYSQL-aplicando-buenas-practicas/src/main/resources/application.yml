@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: product-service
+    jackson:
+        default-property-inclusion: non-null
+        property-naming-strategy: SNAKE_CASE
+    datasource:
+        url: jdbc:mysql://localhost:3306/products_db
+        username: root
+        password: sasa1234
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        database-platform: org.hibernate.dialect.MySQLDialect
+        show-sql: true

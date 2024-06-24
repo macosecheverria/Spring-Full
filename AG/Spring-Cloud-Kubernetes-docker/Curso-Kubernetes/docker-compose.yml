@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+    mysql:
+        image: mysql:8.0.32
+        container_name: kubernetes_mysql
+        ports:
+            - "3306:3306"
+        environment: 
+            MYSQL_ROOT_PASSWORD: sasa1234
+            MYSQL_DATABASE: msvc_users
+        volumes:
+            - ./Msvc-Users/mysql:/var/lib/mysql
+        restart: always
+        networks: 
+            - spring
+
+    postgresql:
+        image: postgres:15.3
+        container_name: kubernetes_postgresql
+        ports: 
+            - "5432:5432"
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: sasa1234
+            POSTGRES_DB: msvc_courses
+        volumes:
+            - ./Msvc-Courses/postgres:/var/lib/postgresql/data
+        restart: always
+        networks: 
+            - spring
+
+    msvc-users:
+        container_name: kubernetes_users
+        build: 
+            context: ./
+            dockerfile: ./Msvc-Users/Dockerfile
+        ports:
+            - "8001:8001"
+        env_file: 
+            - ./Msvc-Users/.env
+        networks:
+            - spring
+        depends_on:
+            - myslq
+        restart: always
+
+    msvc-courses:
+        container_name: kubernetes_courses
+        build: 
+            context: ./
+            dockerfile: ./Msvc-Courses/Dockerfile
+        ports:
+            - "8002:8002"
+        env_file: 
+            - ./Msvc-Courses/.env
+        networks: 
+            - spring
+        depends_on:
+            - postgresql
+        restart: always
+
+volumes:
+    mysql:
+    postgresql:
+
+networks:
+    spring: 

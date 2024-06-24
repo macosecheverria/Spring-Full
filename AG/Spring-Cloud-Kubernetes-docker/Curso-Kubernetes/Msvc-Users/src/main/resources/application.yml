@@ -1,0 +1,31 @@
+server:
+  port: ${PORT} 
+
+spring:
+  config:
+    import:
+    - "optional:file:.env[.properties]"
+  application:
+    name: msvc-users
+  datasource:
+    url: jdbc:mysql://${DB_HOST}/${DB_DATABASE}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    '[org.hibernate.sql]': debug
+  file:
+    path: /app/logs
+
+msvc: 
+  courses:
+    url: ${COURSE_URL}
+     

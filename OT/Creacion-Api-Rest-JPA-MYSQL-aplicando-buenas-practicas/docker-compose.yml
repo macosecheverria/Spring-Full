@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8.0.32
+    restart: always
+    environment:
+      - MYSQL_DATABASE=products_db
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=sasa1234
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+    

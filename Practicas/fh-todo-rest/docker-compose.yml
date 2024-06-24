@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15.3
+    container_name: spring-fh-todo-rest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=spring
+      - POSTGRES_PASSWORD=123456
+    volumes:
+      - ./postgres:/var/lib/postgresql
+    ports:
+      - 5432:5432
